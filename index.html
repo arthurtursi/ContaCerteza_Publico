@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conta Certeza</title>
+  <!-- Chamada da CSS do bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- CDN Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Link para minha CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <!-- barra de navegação -->
+    <nav class="navbar navbar-expand-lg border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand logo fs-3" href="#">Conta Certeza</a>
+
+        <!-- NAV BUTTON -->
+        <!-- data-bs-target serve pra ligar o botão com os itens do menu e data-bs-toggle serve pra dizer como é o tipo de manu -->
+        <button class="navbar-toggler btn-sucess" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#menuLateral">
+          <i class="fa-solid fa-bars texto-link"></i>
+        </button>
+
+        <!-- Offcanvas conteudo -->
+        <!-- tabindex serve para o usuario conseguir acessar o menu através do teclado, algo assim eu acho -->
+        <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1">
+          <div class="offcanvas-header logo">
+            <h5 class="fs-3">Conta Certeza</h5>
+            <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="navbar-nav fs-5 justify-content-evenly">
+              <li class=""><a href="#" class="texto-link">Painel</a></li>
+              <li class=""><a href="#" class="texto-link">Receitas</a></li>
+              <li class=""><a href="#" class="texto-link">Despesas</a></li>
+              <li class=""><a href="#" class="texto-link">Planejamento</a></li>
+              <li class=""><a href="#" class="texto-link">Objetivos</a></li>
+              <li class=""><a href="#" class="texto-link">Ajuda</a></li>
+          </div>
+        </section>
+
+      </div>
+    </nav>
+
+    <!-- Relatório total, despesas e receitas -->
+    <div class="container-fluid col-md-8 col-xl-6 mt-4">
+      <div class="row px-3">
+        <div class="col-6 texto-link fw-semibold fs-5">Despesa mês anterior</div>
+        <div class="col-6 text-end">R$1270</div>
+      </div>
+      <div class="px-3 mt-3 py-3">
+        <h1 class="fs-4 text-center">Teto de gastos mensal</h1>
+        <div class="row justify-content-between align-items-center">
+
+          <div class="col-3 text-start">R$2.005,48</div>
+          <div class="col-6">
+            <div class="progress" role="progressbar" aria-label="Teto de gastos" aria-valuenow="100" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-danger text-dark" style="width: 100%">200%</div>
+            </div>
+          </div>
+          <div class="col-3 text-end">R$1000,00</div>
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="pb-3">
+    <!-- Despesas Receitas -->
+    <div class="container col-md-8 col-xl-6">
+      <div class="ps-3 pe-3">
+        <div class="row justify-content-between">
+
+          <div class="col-5 mt-3 shadow-sm p-3 mb-1 bg-body-tertiary rounded-4">
+            <div class="row">
+              <div class="col-6 fw-semibold">Despesas</div>
+              <div class="col-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-6">Planejado</div>
+              <div class="col-6 text-end">R$1000,00</div>
+            </div>
+            <div class="row">
+              <div class="col-6">Real</div>
+              <div class="col-6 text-end">R$2.005,48</div>
+            </div>
+          </div>
+
+          <div class="col-5 mt-3 shadow-sm p-3 mb-1 bg-body-tertiary rounded-4">
+            <div class="row">
+              <div class="col-6 fw-semibold">Receitas</div>
+              <div class="col-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-6">Planejado</div>
+              <div class="col-6 text-end">R$2500,00</div>
+            </div>
+            <div class="row">
+              <div class="col-6">Real</div>
+              <div class="col-6 text-end">R$833,00</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="container col-md-8 col-xl-6 mt-3">
+      <h3 class="fs-5 texto-link mb-3">Maiores despesas por categoria</h3>
+      <div class="ps-3 pe-3">
+
+        <div class="row rounded-4 border align-items-center mb-3 shadow-sm p-1 bg-body-tertiary">
+          <div class="col-3 texto-link py-3 text-center border rounded-4"><i class="fa-solid fa-car-side fa-xl"></i>
+          </div>
+          <div class="col-6 text-start fw-semibold">Transporte</div>
+          <div class="col-3 text-end">R$712,74</div>
+        </div>
+
+        <div class="row rounded-4 border align-items-center mb-3 shadow-sm p-1 bg-body-tertiary">
+          <div class="col-3 texto-link py-3 text-center border rounded-4"><i
+              class="fa-solid fa-cart-shopping fa-xl"></i></div>
+          <div class="col-6 text-start fw-semibold">Mercado</div>
+          <div class="col-3 text-end">R$614,25</div>
+        </div>
+
+        <div class="row rounded-4 border align-items-center mb-3 shadow-sm p-1 bg-body-tertiary">
+          <div class="col-3 texto-link py-3 text-center border rounded-4"><i class="fa-solid fa-utensils fa-xl"></i>
+          </div>
+          <div class="col-6 text-start fw-semibold">Restaurante</div>
+          <div class="col-3 text-end">R$300,93</div>
+        </div>
+
+        <div class="row rounded-4 border align-items-center mb-3 shadow-sm p-1 bg-body-tertiary">
+          <div class="col-3 texto-link py-3 text-center border rounded-4"><i class="fa-solid fa-hospital fa-xl"></i>
+          </div>
+          <div class="col-6 text-start fw-semibold">Saúde</div>
+          <div class="col-3 text-end">R$297,56</div>
+        </div>
+
+        <div class="row rounded-4 border align-items-center mb-3 shadow-sm p-1 bg-body-tertiary">
+          <div class="col-3 texto-link py-3 text-center border rounded-4"><i class="fa-solid fa-wifi fa-xl"></i>
+          </div>
+          <div class="col-6 text-start fw-semibold">Internet</div>
+          <div class="col-3 text-end">R$75,00</div>
+        </div>
+
+      </div>
+
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="texto-bg">
+    <div class="container-fluid texto-bg col-md-8 col-xl-6 pb-3 pt-3">
+      <div class="row texto-bg mb-3">
+        <div class="col-12 texto-bg">
+          <h3 class="texto-bg fs-5 text-center">Redes sociais</h3>
+        </div>
+        <div class="col texto-bg text-center">
+          <a href="#" class="texto-bg"><i class="texto-bg fa-brands fa-instagram icon"></i></a>
+          <a href="#" class="texto-bg"><i class="texto-bg fa-brands fa-twitter icon"></i></a>
+          <a href="#" class="texto-bg"><i class="texto-bg fa-brands fa-youtube icon"></i></a>
+        </div>
+      </div>
+      <div class="row texto-bg align-items-center text-center mb-3">
+        <div class="col-6 texto-bg"><a href="#" class="texto-bg">Politicas de privacidade</a></div>
+        <div class="col-6 texto-bg"><a href="#" class="texto-bg">Termos de uso</a></div>
+      </div>
+      <div class="row texto-bg">
+        <hr>
+        <div class="col-12 text-center texto-bg"><a href="#" class="texto-bg">Todos os direitos reservados.</a></div>
+        <div class="col-12 text-center logo bg fs-5"><a href="#" class="texto-bg">Conta Certeza.</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chamada do Javascript do bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- Chamada do javascript -->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
